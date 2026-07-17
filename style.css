@@ -1,12 +1,15 @@
+/* Deep Aesthetic Canvas UI Configuration */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;600;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Avenir', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 100%);
+    background: linear-gradient(135deg, #121214 0%, #201a1e 100%);
+    font-family: 'Nunito', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,105 +18,129 @@ body {
     position: relative;
 }
 
-/* Background Animation */
-.hearts-bg {
+/* Background Atmosphere Setup (Dark and Luminous Theme) */
+.hearts-bg, .butterfly-container {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
-.heart {
+.heart-node {
     position: absolute;
-    font-size: 24px;
-    color: rgba(255, 77, 109, 0.45);
-    animation: floatUp 4.5s linear infinite;
-    bottom: -30px;
+    color: rgba(255, 77, 109, 0.4);
+    animation: driftVertical 5s linear infinite;
+    bottom: -40px;
+    filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.6));
 }
 
-@keyframes floatUp {
-    0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 1; }
-    100% { transform: translateY(-115vh) rotate(360deg) scale(1.2); opacity: 0; }
+.butterfly-node {
+    position: absolute;
+    font-size: 22px;
+    animation: flyFlutter 6s ease-in-out infinite;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 6px #ff758f);
 }
 
-/* Big Passcode Container */
+@keyframes driftVertical {
+    0% { transform: translateY(0) rotate(0deg) scale(0.7); opacity: 1; }
+    100% { transform: translateY(-115vh) rotate(360deg) scale(1.3); opacity: 0; }
+}
+
+@keyframes flyFlutter {
+    0% { transform: translate(0, 100vh) scale(0.6) rotate(0deg); opacity: 0; }
+    20% { opacity: 0.8; }
+    80% { opacity: 0.8; }
+    100% { transform: translate(100vw, -10vh) scale(1.1) rotate(45deg); opacity: 0; }
+}
+
+/* Authentic Passcode Container System */
 .passcode-container {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 45px 35px;
-    border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(255, 77, 109, 0.25);
+    background: rgba(30, 30, 36, 0.95);
+    padding: 40px 30px;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 77, 109, 0.2);
     text-align: center;
     z-index: 10;
-    border: 3px solid #ffccd5;
+    border: 2px solid rgba(255, 204, 213, 0.2);
     width: 90%;
-    max-width: 450px;
+    max-width: 420px;
+    animation: modalPopIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.mochi-character-pass {
+.cute-doodle-avatar {
     font-size: 3.5rem;
-    margin-bottom: 15px;
-    animation: waveCharacter 2s ease-in-out infinite;
-}
-
-@keyframes waveCharacter {
-    0%, 100% { transform: rotate(-5deg) translateY(0); }
-    50% { transform: rotate(5deg) translateY(-8px); }
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.4);
+    animation: floatVertical 2.5s ease-in-out infinite;
 }
 
 .passcode-container h2 {
-    color: #c2185b;
-    font-size: 1.4rem;
+    color: #ffccd5;
+    font-size: 1.3rem;
+    font-weight: 600;
     margin-bottom: 25px;
 }
 
+.passcode-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .passcode-box input {
-    width: 160px;
+    width: 150px;
     padding: 12px;
     font-size: 1.8rem;
     text-align: center;
-    letter-spacing: 8px;
-    border: 2.5px solid #ffccd5;
-    border-radius: 20px;
+    letter-spacing: 6px;
+    border: 2px solid #ff758f;
+    border-radius: 16px;
     outline: none;
-    color: #c2185b;
-    background-color: #fff0f3;
+    color: #fff;
+    background: #2a2a35;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .passcode-box button {
-    background-color: #ff4d6d;
+    background: linear-gradient(45deg, #ff4d6d, #ff758f);
     color: white;
     border: none;
-    padding: 12px 40px;
+    padding: 12px 45px;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 800;
     border-radius: 25px;
     cursor: pointer;
-    margin-top: 20px;
-    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
-    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(255, 77, 109, 0.4);
+    transition: all 0.3s ease;
 }
 
-.passcode-box button:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4); }
-.error-msg { color: #d32f2f; font-size: 1rem; margin-top: 15px; display: none; }
+.passcode-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 77, 109, 0.6);
+}
 
-/* Large & Aesthetic Content Area */
+.error-msg { color: #ff4d6d; font-size: 0.95rem; margin-top: 15px; display: none; }
+
+/* Large Aesthetic Dashboard Structure */
 .main-web {
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(26, 26, 32, 0.96);
     width: 95%;
-    max-width: 700px;
-    height: 90vh;
+    max-width: 580px;
+    height: 88vh;
     border-radius: 32px;
-    box-shadow: 0 25px 60px rgba(251, 180, 184, 0.6);
-    padding: 40px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 40px rgba(255, 117, 143, 0.15);
+    padding: 30px 25px;
     position: relative;
+    border: 2px solid rgba(255, 117, 143, 0.25);
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #ffccd5;
-    z-index: 5;
 }
 
 .hidden { display: none !important; }
@@ -125,143 +152,137 @@ body {
     text-align: center;
     width: 100%;
     height: 100%;
-    justify-content: space-between;
 }
 
-.slide.active { display: flex; }
-
-/* Text Animations */
-h2.animate-text {
-    color: #b31b4d;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.4;
-    animation: textAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes textAppear {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.sub-text { color: #ff4d6d; font-size: 1.2rem; }
-.cute-divider { font-size: 1.3rem; margin: 10px 0; }
-
-/* Hanging & Polaroid Frames Design */
-.aesthetic-frame {
-    background: white;
-    padding: 15px 15px 20px 15px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    max-width: 85%;
+.slide.active {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    animation: slideFadeSwitch 0.5s ease-in-out forwards;
 }
 
-.aesthetic-frame img {
-    max-height: 380px;
-    max-width: 100%;
-    object-fit: contain;
+/* Typography Matrix */
+h2.animate-text-reveal {
+    color: #fff0f3;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.45;
+    margin-bottom: auto;
+}
+
+.canvas-subtitle-glow { color: #ff758f; font-size: 1.15rem; margin-top: 8px; text-shadow: 0 0 10px rgba(255,117,143,0.3); }
+.cute-doodle-divider { font-size: 1.2rem; margin: 5px 0 15px 0; }
+.doodle-accent-top { font-size: 1.3rem; margin-top: 5px; animation: pulseSparkle 1.5s infinite; }
+
+/* Structural Art Hanging Engine */
+.polaroid-hanging {
+    background: #ffffff;
+    padding: 14px 14px 18px 14px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
     border-radius: 4px;
+    max-width: 85%;
+    margin: auto 0;
 }
 
-/* Polaroid Specific Setup */
-.polaroid-big {
-    flex-direction: column;
-    padding-bottom: 15px;
-    border: 1px solid #eee;
-}
-.polaroid-caption {
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    color: #555;
-    margin-top: 15px;
-    font-size: 1.2rem;
+.polaroid-hanging img {
+    max-height: 320px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 2px;
 }
 
-/* Ribbons Layout Frame */
-.ribbon-style {
-    position: relative;
-}
-.ribbon-style::before {
+/* Hanging Clothesline Configurations */
+.ribbon-hanging { position: relative; }
+.ribbon-hanging::before {
     content: '🎀';
     position: absolute;
-    top: -22px;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 2.2rem;
-    z-index: 5;
+    z-index: 6;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-/* Action Controls Buttons Styling */
-.btn-group { display: flex; gap: 25px; width: 100%; justify-content: center; margin-top: 15px; }
+.polaroid-classic { display: flex; flex-direction: column; }
+.handwritten-tag {
+    font-family: 'Caveat', cursive;
+    color: #2b2b2b;
+    font-size: 1.6rem;
+    margin-top: 12px;
+}
+
+/* Core Buttons Architecture Fixes */
+.action-footer-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: auto;
+    padding-top: 15px;
+    z-index: 12;
+}
+
 .btn {
-    padding: 14px 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    padding: 12px 45px;
+    font-size: 1.15rem;
+    font-weight: 800;
     border: none;
-    border-radius: 35px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-}
-.btn:hover { transform: scale(1.08); }
-.yes-btn, .no-btn { background-color: #ff4d6d; color: white; box-shadow: 0 6px 15px rgba(255, 77, 109, 0.35); }
-
-.arrow-btn {
-    background: none;
-    border: none;
-    color: #ff4d6d;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    align-self: flex-end;
-    animation: pulseBtn 1.5s infinite;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@keyframes pulseBtn {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
+.yes-btn { background: linear-gradient(45deg, #ff4d6d, #ff758f); color: #fff; box-shadow: 0 6px 16px rgba(255, 77, 109, 0.4); }
+.no-btn { background: #3a3a4a; color: #ffccd5; border: 1px solid rgba(255,255,255,0.1); }
+
+.btn:hover { transform: scale(1.05) translateY(-2px); }
+
+.next-slide-trigger {
+    background: transparent;
+    color: #ff758f;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: bounceHorizontal 1.4s infinite;
 }
 
-/* Narrative Scroller Message Wrapper */
-.letter-box {
+/* Scroll Letter Layout Configuration */
+.aesthetic-scroll-letter {
     text-align: left;
-    background: #ffffff;
-    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 24px;
     border-radius: 20px;
-    font-size: 1.1rem;
-    color: #444;
+    font-size: 1rem;
+    color: #e0e0e6;
     line-height: 1.7;
     overflow-y: auto;
-    max-height: 60%;
-    border: 2.5px dashed #ffb3c1;
-    box-shadow: inset 0 4px 12px rgba(0,0,0,0.03);
+    max-height: 55%;
+    border: 2px dashed rgba(255, 117, 143, 0.3);
+    margin: auto 0;
 }
-.letter-box p { margin-bottom: 15px; }
-.letter-box .sign { text-align: right; font-weight: bold; color: #ff4d6d; font-size: 1.2rem; margin-top: 20px; }
+.aesthetic-scroll-letter p { margin-bottom: 15px; }
+.aesthetic-scroll-letter .signature-font { text-align: right; font-family: 'Caveat', cursive; font-size: 1.8rem; color: #ff758f; }
 
-.highlight-text { font-size: 2.8rem; font-weight: 900; letter-spacing: 2px; }
-.rainbow-glow { color: #ff4d6d; text-shadow: 0 0 10px rgba(255,77,109,0.2); }
+.glowing-neon-title { font-size: 2.5rem; font-weight: 900; color: #ff4d6d; text-shadow: 0 0 15px rgba(255, 77, 109, 0.6); margin: 5px 0; }
 
-/* Hanging Ribbon Component Grid Layout */
-.hanging-ribbons-container {
+/* Dynamic Multi-Photo String Layout */
+.clothesline-canvas-board {
     position: relative;
     width: 100%;
-    height: 340px;
-    margin-top: 10px;
+    height: 280px;
+    margin: auto 0;
     display: flex;
     justify-content: space-around;
 }
 
-.ribbon-string {
+.main-rope-line {
     position: absolute;
-    top: 15px;
-    width: 95%;
+    top: 20px;
+    width: 100%;
     height: 2px;
-    background: #ffb3c1;
+    background: rgba(255, 117, 143, 0.3);
     z-index: 1;
 }
 
-.hanging-item {
+.clothesline-item {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -270,46 +291,26 @@ h2.animate-text {
     transform-origin: top center;
 }
 
-.mini-ribbon {
-    font-size: 1.5rem;
-    margin-bottom: -5px;
-    z-index: 3;
-}
+.clothespin { font-size: 1.4rem; z-index: 4; margin-bottom: -4px; }
+.mini-polaroid-frame { background: #fff; padding: 6px 6px 14px 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border-radius: 1px; }
+.mini-polaroid-frame img { width: 115px; height: 135px; object-fit: cover; }
 
-.polaroid-card {
-    background: white;
-    padding: 8px 8px 18px 8px;
-    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-    border: 1px solid #f0f0f0;
-    border-radius: 2px;
-}
+/* Custom Wave Vectors */
+.angle-left { animation: swingMotion 3s ease-in-out infinite alternate; }
+.angle-right { animation: swingMotion 3.4s ease-in-out infinite alternate-reverse; margin-top: 12px; }
+.angle-straight { animation: swingMotion 2.8s ease-in-out infinite alternate; margin-top: 5px; }
 
-.polaroid-card img {
-    width: 150px;
-    height: 170px;
-    object-fit: cover;
-}
+@keyframes swingMotion { 0% { transform: rotate(-5deg); } 100% { transform: rotate(5deg); } }
 
-/* Custom Rotations & Hanging Strings Sway Animations */
-.h1 { animation: swayLeft 3.5s ease-in-out infinite alternate; }
-.h2 { animation: swayRight 4s ease-in-out infinite alternate; margin-top: 15px; }
-.h3 { animation: swayLeft 3.8s ease-in-out infinite alternate-reverse; }
+.infographic-spline { width: 100%; height: 35px; margin-top: -10px; }
+.canvas-footer-pulse { color: #ff758f; font-weight: 600; font-size: 1.15rem; animation: pulseSparkle 2s infinite; }
 
-@keyframes swayLeft { 0% { transform: rotate(-5deg); } 100% { transform: rotate(4deg); } }
-@keyframes swayRight { 0% { transform: rotate(3deg); } 100% { transform: rotate(-4deg); } }
-
-/* Canvas Decorative Spline Accent Lines SVG mapping */
-.canvas-curve {
-    width: 100%;
-    height: 40px;
-    margin: -10px 0;
-}
-
-.date-text { color: #b31b4d; font-weight: bold; font-size: 1.3rem; letter-spacing: 1px; }
-
-/* Structural Keyframe Animation Components */
-.floating-element { animation: smoothFloat 3s ease-in-out infinite; }
-@keyframes smoothFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
-.shake-element { animation: fastShake 0.6s ease-in-out infinite; }
-@keyframes fastShake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px) rotate(-1deg); } 75% { transform: translateX(5px) rotate(1deg); } }
+/* Procedural Engine Micro-Animations */
+@keyframes slideFadeSwitch { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: scale(1); } }
+@keyframes modalPopIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+@keyframes floatVertical { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes pulseSparkle { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+@keyframes bounceHorizontal { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+.floating-slow { animation: floatVertical 4s ease-in-out infinite; }
+.shake-loop { animation: shakeFrame 0.5s ease-in-out infinite; }
+@keyframes shakeFrame { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
