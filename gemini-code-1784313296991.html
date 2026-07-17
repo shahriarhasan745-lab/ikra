@@ -3,79 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Something Special</title>
+    <title>Something Special For You</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="card-container">
-        <!-- স্লাইড ১: প্রথম প্রপোজাল -->
+        <!-- Slide 1: Initial Question (Pic 1) -->
         <div class="slide active" id="slide1">
             <h2>I made something special for u <br> do u wanna see?</h2>
             <div class="image-box">
-                <!-- আপনার প্রথম ছবি এখানে দিন -->
-                <img src="images/pic1.gif" alt="Cute Cat 1">
+                <img src="WhatsApp Image 2026-07-18 at 00.24.03.jpeg" alt="Proposal Start">
             </div>
             <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(2)">YES</button>
-                <button class="btn no-btn" id="noBtn1" onclick="wrongChoice()">NO</button>
+                <button class="btn yes-btn" onclick="nextSlide(3)">YES</button>
+                <button class="btn no-btn" id="noBtn" onclick="nextSlide(2)">NO</button>
             </div>
         </div>
 
-        <!-- স্লাইড ২: নো বাটনে চাপ দিলে যা দেখাবে -->
+        <!-- Slide 2: If No Clicked (Pic 2) -->
         <div class="slide" id="slide2">
             <h2>Why did u click no?! 😢</h2>
             <div class="image-box">
-                <!-- নো চাপলে যে ছবি দেখাবে -->
-                <img src="images/sad-cat.gif" alt="Sad Cat">
+                <img src="WhatsApp Image 2026-07-18 at 00.24.04.jpeg" alt="Sad Response">
             </div>
             <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(3)">TRY AGAIN</button>
+                <button class="btn yes-btn" onclick="nextSlide(1)">TRY AGAIN</button>
             </div>
         </div>
 
-        <!-- স্লাইড ৩: হ্যাপি বার্থডে -->
+        <!-- Slide 3: The Proposal Introduction (Pic 3) -->
         <div class="slide" id="slide3">
-            <h2>HAPPY BIRTHDAY baby 🎉</h2>
-            <p>I am ur gift 🎁</p>
+            <h2>Can we fix us? ❤️</h2>
+            <p class="sub-text">I miss our old days 🥺</p>
             <div class="image-box">
-                <!-- বার্থডে কেক বা কিউট ছবি -->
-                <img src="images/pic2.gif" alt="Birthday Cat">
+                <img src="WhatsApp Image 2026-07-18 at 00.24.04 (1).jpeg" alt="Memories">
             </div>
             <button class="arrow-btn" onclick="nextSlide(4)">CLICK ME 👉</button>
         </div>
 
-        <!-- স্লাইড ৪: উইশলিস্ট/চিঠি -->
+        <!-- Slide 4: Relationship Reconnect Message (No Pic - Text Only) -->
         <div class="slide" id="slide4">
-            <h2>MY WISH FOR U 💖</h2>
+            <h2>MY WISH FOR US 💖</h2>
             <div class="letter-box">
-                <p>Happiest baby baby 🥺</p>
-                <p>I wish may god bless you with all the happiness...</p>
-                <p>You are my comfort person. Thank you for always being there for me.</p>
-                <p>Once again, Happy Birthday! 🎂</p>
+                <p><strong>Hey baby... 🥺</strong></p>
+                <p>No matter what happened or how things went wrong, my feelings for you have never changed. Life just doesn't feel the same without you around.</p>
+                <p>You are still my comfort person, and no one could ever take your place. I miss your laugh, our late-night talks, and the way you used to understand me like nobody else.</p>
+                <p>I know we've had our misunderstandings, but I truly believe we are meant to be. I am ready to put in all the efforts, love, and care to make things right again.</p>
+                <p>Can we please let go of the past and give us another chance? I want to build our future together, holding your hand forever.</p>
+                <p class="sign">Forever Yours ❤️</p>
             </div>
             <button class="arrow-btn" onclick="nextSlide(5)">CLICK ME 👉</button>
         </div>
 
-        <!-- স্লাইড ৫: ভার্চুয়াল হাগ -->
+        <!-- Slide 5: Virtual Hug / Miss You (Pic 4) -->
         <div class="slide" id="slide5">
-            <h2>Virtual hug for ya! 🤗</h2>
+            <h2>A tight hug for ya! 🤗</h2>
             <h1 class="highlight-text">I MISS YOU</h1>
             <div class="image-box">
-                <!-- হাগ করার ছবি -->
-                <img src="images/pic3.gif" alt="Hug">
+                <img src="WhatsApp Image 2026-07-18 at 00.24.04 (2).jpeg" alt="Virtual Hug">
             </div>
             <button class="arrow-btn" onclick="nextSlide(6)">CLICK ME 👉</button>
         </div>
 
-        <!-- স্লাইড ৬: ফাইনাল পিকচার কোলাজ/প্রপোজাল -->
+        <!-- Slide 6: Collage & Final Proposal (Pic 5, 6, 7) -->
         <div class="slide" id="slide6">
-            <div class="collage-container">
-                <!-- আপনার সিলেক্ট করা মেইন ছবি এখানে বসাবেন -->
-                <img src="images/main-photo.jpg" alt="Our Photo" class="main-photo">
+            <h2>Will you be mine again? 💍</h2>
+            
+            <!-- Polaroid/Frame Style Collage Layout for remaining 3 photos -->
+            <div class="collage-wrapper">
+                <div class="collage-item p1">
+                    <img src="WhatsApp Image 2026-07-18 at 00.24.05.jpeg" alt="Memories 1">
+                </div>
+                <div class="collage-item p2">
+                    <img src="WhatsApp Image 2026-07-18 at 00.24.05 (1).jpeg" alt="Memories 2">
+                </div>
+                <div class="collage-item p3">
+                    <img src="WhatsApp Image 2026-07-18 at 00.24.05 (2).jpeg" alt="Memories 3">
+                </div>
             </div>
-            <h2>Will you be mine? 💍</h2>
-            <p class="date-text">19.05.2026</p>
+
+            <p class="date-text">Let's start over ✨</p>
         </div>
     </div>
 
