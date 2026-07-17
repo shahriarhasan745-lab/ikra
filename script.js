@@ -3,20 +3,19 @@ function checkPasscode() {
     const enteredCode = document.getElementById('passInput').value;
     const errorMsg = document.getElementById('errorMsg');
     
-    // Exact passcode key validated
     if (enteredCode === "2010") {
         document.getElementById('passcodeScreen').classList.add('hidden');
         document.getElementById('mainContent').classList.remove('hidden');
-        startHeartsShower(); // Fire active background loop
+        initializeCanvasAnimations(); // Start love & butterflies background shower
     } else {
         errorMsg.style.display = 'block';
         const inputField = document.getElementById('passInput');
-        inputField.style.borderColor = '#d32f2f';
-        setTimeout(() => { inputField.style.borderColor = '#ffccd5'; }, 600);
+        inputField.style.borderColor = '#ff4d6d';
+        setTimeout(() => { inputField.style.borderColor = '#ff758f'; }, 600);
     }
 }
 
-// Function to route active page frames
+// Router for Slide switching
 function nextSlide(slideNumber) {
     const slides = document.querySelectorAll('.slide');
     slides.forEach(slide => {
@@ -29,24 +28,34 @@ function nextSlide(slideNumber) {
     }
 }
 
-// Dynamic Floating Canvas Heart Engine
-function startHeartsShower() {
-    const bgContainer = document.getElementById('heartsBg');
-    const emoIcons = ['❤️', '💖', '🌸', '✨', '💕'];
+// Procedural Canvas Animation Engine
+function initializeCanvasAnimations() {
+    const heartsBg = document.getElementById('heartsBg');
+    const butterflyContainer = document.getElementById('butterflyContainer');
     
+    const heartIcons = ['❤️', '💖', '✨', '💕'];
+    const butterflyIcons = ['🦋', '🌸'];
+
+    // Loop 1: Love Hearts Flowing Layer
     setInterval(() => {
-        const leafNode = document.createElement('div');
-        leafNode.classList.add('heart');
-        leafNode.innerText = emoIcons[Math.floor(Math.random() * emoIcons.length)];
-        
-        leafNode.style.left = Math.random() * 100 + 'vw';
-        leafNode.style.animationDuration = Math.random() * 2 + 3.5 + 's'; 
-        leafNode.style.fontSize = Math.random() * 12 + 18 + 'px';
-        
-        bgContainer.appendChild(leafNode);
-        
-        setTimeout(() => {
-            leafNode.remove();
-        }, 4500);
-    }, 300);
+        const heart = document.createElement('div');
+        heart.classList.add('heart-node');
+        heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = Math.random() * 2 + 3.5 + 's';
+        heart.style.fontSize = Math.random() * 10 + 16 + 'px';
+        heartsBg.appendChild(heart);
+        setTimeout(() => { heart.remove(); }, 5000);
+    }, 400);
+
+    // Loop 2: Aesthetic Flying Butterflies Layer
+    setInterval(() => {
+        const butterfly = document.createElement('div');
+        butterfly.classList.add('butterfly-node');
+        butterfly.innerText = butterflyIcons[Math.floor(Math.random() * butterflyIcons.length)];
+        butterfly.style.top = Math.random() * 40 + 40 + 'vh'; // Spawn points
+        butterfly.style.animationDuration = Math.random() * 3 + 5 + 's';
+        butterflyContainer.appendChild(butterfly);
+        setTimeout(() => { butterfly.remove(); }, 7000);
+    }, 1500);
 }
