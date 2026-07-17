@@ -8,27 +8,41 @@
 </head>
 <body>
 
-    <div class="card-container">
+    <!-- Floating Hearts Background Layer -->
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <!-- Passcode Screen (First State) -->
+    <div class="passcode-container" id="passcodeScreen">
+        <h2>Enter the special year to enter ❤️</h2>
+        <div class="passcode-box">
+            <input type="password" id="passInput" placeholder="••••" maxlength="4">
+            <button onclick="checkPasscode()">Unlock ✨</button>
+        </div>
+        <p class="error-msg" id="errorMsg">Wrong passcode! Try again 🥺</p>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="card-container hidden" id="mainContent">
         <!-- Slide 1: Initial Question (Pic 1) -->
         <div class="slide active" id="slide1">
             <h2>I made something special for u <br> do u wanna see?</h2>
-            <div class="image-box">
+            <div class="image-box animated-bounce">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.03.jpeg" alt="Proposal Start">
             </div>
             <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(3)">YES</button>
-                <button class="btn no-btn" id="noBtn" onclick="nextSlide(2)">NO</button>
+                <button class="btn yes-btn pop-effect" onclick="nextSlide(3)">YES</button>
+                <button class="btn no-btn pop-effect" id="noBtn" onclick="nextSlide(2)">NO</button>
             </div>
         </div>
 
         <!-- Slide 2: If No Clicked (Pic 2) -->
         <div class="slide" id="slide2">
             <h2>Why did u click no?! 😢</h2>
-            <div class="image-box">
+            <div class="image-box animated-shake">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.04.jpeg" alt="Sad Response">
             </div>
             <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(1)">TRY AGAIN</button>
+                <button class="btn yes-btn pop-effect" onclick="nextSlide(1)">TRY AGAIN</button>
             </div>
         </div>
 
@@ -36,16 +50,16 @@
         <div class="slide" id="slide3">
             <h2>Can we fix us? ❤️</h2>
             <p class="sub-text">I miss our old days 🥺</p>
-            <div class="image-box">
+            <div class="image-box animated-pulse">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.04 (1).jpeg" alt="Memories">
             </div>
             <button class="arrow-btn" onclick="nextSlide(4)">CLICK ME 👉</button>
         </div>
 
-        <!-- Slide 4: Relationship Reconnect Message (No Pic - Text Only) -->
+        <!-- Slide 4: Relationship Reconnect Message (Text Only) -->
         <div class="slide" id="slide4">
             <h2>MY WISH FOR US 💖</h2>
-            <div class="letter-box">
+            <div class="letter-box fade-in-up">
                 <p><strong>Hey baby... 🥺</strong></p>
                 <p>No matter what happened or how things went wrong, my feelings for you have never changed. Life just doesn't feel the same without you around.</p>
                 <p>You are still my comfort person, and no one could ever take your place. I miss your laugh, our late-night talks, and the way you used to understand me like nobody else.</p>
@@ -59,8 +73,8 @@
         <!-- Slide 5: Virtual Hug / Miss You (Pic 4) -->
         <div class="slide" id="slide5">
             <h2>A tight hug for ya! 🤗</h2>
-            <h1 class="highlight-text">I MISS YOU</h1>
-            <div class="image-box">
+            <h1 class="highlight-text animated-float">I MISS YOU</h1>
+            <div class="image-box animated-bounce">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.04 (2).jpeg" alt="Virtual Hug">
             </div>
             <button class="arrow-btn" onclick="nextSlide(6)">CLICK ME 👉</button>
@@ -70,7 +84,6 @@
         <div class="slide" id="slide6">
             <h2>Will you be mine again? 💍</h2>
             
-            <!-- Polaroid/Frame Style Collage Layout for remaining 3 photos -->
             <div class="collage-wrapper">
                 <div class="collage-item p1">
                     <img src="WhatsApp Image 2026-07-18 at 00.24.05.jpeg" alt="Memories 1">
@@ -83,7 +96,7 @@
                 </div>
             </div>
 
-            <p class="date-text">Let's start over ✨</p>
+            <p class="date-text animated-pulse">Let's start over ✨</p>
         </div>
     </div>
 
