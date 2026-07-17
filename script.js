@@ -6,15 +6,13 @@ function checkPasscode() {
         document.getElementById('passcodeScreen').classList.add('hidden');
         document.getElementById('mainContent').classList.remove('hidden');
         initializeCanvasAnimations();
+        // Sets background image of the first active slide immediately upon unlock
+        updateBackgroundTheme(document.querySelector('.slide.active'));
     } else {
         errorMsg.style.display = 'block';
         const inputField = document.getElementById('passInput');
         inputField.style.borderColor = '#ff4d6d';
-        inputField.classList.add('shake-loop');
-        setTimeout(() => { 
-            inputField.style.borderColor = 'rgba(255, 117, 143, 0.5)'; 
-            inputField.classList.remove('shake-loop');
-        }, 600);
+        setTimeout(() => { inputField.style.borderColor = 'rgba(255, 117, 143, 0.5)'; }, 600);
     }
 }
 
@@ -27,6 +25,15 @@ function nextSlide(slideNumber) {
     const targetSlide = document.getElementById(`slide${slideNumber}`);
     if (targetSlide) {
         targetSlide.classList.add('active');
+        updateBackgroundTheme(targetSlide); // Switch full-viewport background engine hook
+    }
+}
+
+function updateBackgroundTheme(slideElement) {
+    const themeBg = document.getElementById('themeBg');
+    if (slideElement && slideElement.hasAttribute('data-bg')) {
+        const imageUrl = slideElement.getAttribute('data-bg');
+        themeBg.style.backgroundImage = `url('${imageUrl}')`;
     }
 }
 
