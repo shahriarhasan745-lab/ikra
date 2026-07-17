@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7d6d8; /* হালকা গোলাপি ব্যাকগ্রাউন্ড */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card-container {
+    background: #fff5f6;
+    width: 90%;
+    max-width: 450px;
+    height: 80vh;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fbc4c8;
+}
+
+.slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.slide.active {
+    display: flex;
+}
+
+h2 {
+    color: #b33939;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+.image-box img {
+    max-width: 220px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.yes-btn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+.no-btn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    color: #ff4d6d;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.letter-box {
+    text-align: left;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    overflow-y: auto;
+    max-height: 60%;
+    border: 1px dashed #ff4d6d;
+}
+
+.highlight-text {
+    color: #ff4d6d;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.collage-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date-text {
+    color: #888;
+    font-style: italic;
+}
