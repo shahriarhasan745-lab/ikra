@@ -8,12 +8,11 @@
 </head>
 <body>
 
-    <!-- Floating Background Elements -->
     <div class="hearts-bg" id="heartsBg"></div>
+    <div class="butterfly-container" id="butterflyContainer"></div>
 
-    <!-- Passcode Lock Screen -->
     <div class="passcode-container" id="passcodeScreen">
-        <div class="mochi-character-pass">✨ 🐻 ✨</div>
+        <div class="cute-doodle-avatar">✨ 🤍 ✨</div>
         <h2>Enter the special year to enter ❤️</h2>
         <div class="passcode-box">
             <input type="password" id="passInput" placeholder="••••" maxlength="4">
@@ -22,110 +21,115 @@
         <p class="error-msg" id="errorMsg">Wrong passcode! Try again 🥺</p>
     </div>
 
-    <!-- Main Full Web Container -->
     <div class="main-web hidden" id="mainContent">
         
-        <!-- Slide 1: Proposal Start (Pic 1) -->
         <div class="slide active" id="slide1">
-            <h2 class="animate-text">I made something special for u <br> do u wanna see?</h2>
-            <div class="aesthetic-frame ribbon-style">
+            <h2 class="animate-text-reveal">I made something special for u <br> do u wanna see?</h2>
+            
+            <div class="doodle-accent-top">🦋 ✨ 🦋</div>
+            
+            <div class="polaroid-hanging ribbon-hanging">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.03.jpeg" alt="Proposal">
             </div>
-            <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(3)">YES</button>
-                <button class="btn no-btn" id="noBtn" onclick="nextSlide(2)">NO</button>
+            
+            <div class="action-footer-btns">
+                <button class="btn yes-btn bouncy" onclick="nextSlide(3)">YES</button>
+                <button class="btn no-btn bouncy" id="noBtn" onclick="nextSlide(2)">NO</button>
             </div>
         </div>
 
-        <!-- Slide 2: If No Clicked (Pic 2) -->
         <div class="slide" id="slide2">
-            <h2 class="animate-text">Why did u click no?! 😢</h2>
-            <div class="aesthetic-frame ribbon-style shake-element">
+            <h2 class="animate-text-reveal">Why did u click no?! 😢</h2>
+            
+            <div class="polaroid-hanging ribbon-hanging shake-loop">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.04.jpeg" alt="Sad">
             </div>
-            <div class="btn-group">
+            
+            <div class="action-footer-btns">
                 <button class="btn yes-btn" onclick="nextSlide(1)">TRY AGAIN</button>
             </div>
         </div>
 
-        <!-- Slide 3: Reconnect Intro (Pic 3) -->
         <div class="slide" id="slide3">
-            <h2 class="animate-text">Can we fix us? ❤️</h2>
-            <p class="sub-text">I miss our old days 🥺</p>
-            <div class="aesthetic-frame polaroid-big floating-element">
+            <h2 class="animate-text-reveal">Can we fix us? ❤️</h2>
+            <p class="canvas-subtitle-glow">I miss our old days 🥺</p>
+            
+            <div class="polaroid-hanging polaroid-classic floating-slow">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.04 (1).jpeg" alt="Fix Us">
-                <div class="polaroid-caption">You & Me ✨</div>
+                <div class="handwritten-tag">You & Me Always ✨</div>
             </div>
-            <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(4)">CLICK ME 👉</button>
+            
+            <div class="action-footer-btns">
+                <button class="btn next-slide-trigger" onclick="nextSlide(4)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <!-- Slide 4: Reconnect Message -->
         <div class="slide" id="slide4">
-            <h2 class="animate-text">MY WISH FOR US 💖</h2>
-            <div class="cute-divider">🌸 🐻 💕 🐰 🌸</div>
-            <div class="letter-box">
+            <h2 class="animate-text-reveal">MY WISH FOR US 💖</h2>
+            <div class="cute-doodle-divider">🌸 🧸 ✨ 🐰 🌸</div>
+            
+            <div class="aesthetic-scroll-letter">
                 <p><strong>Hey baby... 🥺</strong></p>
                 <p>No matter what happened or how things went wrong, my feelings for you have never changed. Life just doesn't feel the same without you around.</p>
                 <p>You are still my comfort person, and no one could ever take your place. I miss your laugh, our late-night talks, and the way you used to understand me like nobody else.</p>
                 <p>I know we've had our misunderstandings, but I truly believe we are meant to be. I am ready to put in all the efforts, love, and care to make things right again.</p>
                 <p>Can we please let go of the past and give us another chance? I want to build our future together, holding your hand forever.</p>
-                <p class="sign">Forever Yours ❤️</p>
+                <p class="signature-font">Forever Yours ❤️</p>
             </div>
-            <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(5)">CLICK ME 👉</button>
+            
+            <div class="action-footer-btns">
+                <button class="btn next-slide-trigger" onclick="nextSlide(5)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <!-- Slide 5: Virtual Hug / Miss You (Pic 4) -->
         <div class="slide" id="slide5">
-            <h2 class="animate-text">A tight hug for ya! 🤗</h2>
-            <h1 class="highlight-text">I MISS YOU</h1>
-            <div class="aesthetic-frame polaroid-big floating-element">
+            <h2 class="animate-text-reveal">A tight hug for ya! 🤗</h2>
+            <h1 class="glowing-neon-title">I MISS YOU</h1>
+            
+            <div class="polaroid-hanging polaroid-classic floating-slow">
                 <img src="WhatsApp Image 2026-07-18 at 00.24.04 (2).jpeg" alt="Hug">
             </div>
-            <div class="btn-group">
-                <button class="btn yes-btn" onclick="nextSlide(6)">CLICK ME 👉</button>
+            
+            <div class="action-footer-btns">
+                <button class="btn next-slide-trigger" onclick="nextSlide(6)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <!-- Slide 6: Aesthetic Ribbon Hanging Collage Layout (Pic 5, 6, 7) -->
         <div class="slide" id="slide6">
-            <h2 class="animate-text">Will you be mine again? 💍</h2>
+            <h2 class="animate-text-reveal">Will you be mine again? 💍</h2>
             
-            <div class="hanging-ribbons-container">
-                <div class="ribbon-string"></div>
+            <div class="clothesline-canvas-board">
+                <div class="main-rope-line"></div>
                 
-                <div class="hanging-item h1">
-                    <div class="mini-ribbon">🎀</div>
-                    <div class="polaroid-card">
+                <div class="clothesline-item angle-left">
+                    <div class="clothespin">🎀</div>
+                    <div class="mini-polaroid-frame">
                         <img src="WhatsApp Image 2026-07-18 at 00.24.05.jpeg" alt="Us 1">
                     </div>
                 </div>
                 
-                <div class="hanging-item h2">
-                    <div class="mini-ribbon">🎀</div>
-                    <div class="polaroid-card">
+                <div class="clothesline-item angle-right">
+                    <div class="clothespin">🎀</div>
+                    <div class="mini-polaroid-frame">
                         <img src="WhatsApp Image 2026-07-18 at 00.24.05 (1).jpeg" alt="Us 2">
                     </div>
                 </div>
                 
-                <div class="hanging-item h3">
-                    <div class="mini-ribbon">🎀</div>
-                    <div class="polaroid-card">
+                <div class="clothesline-item angle-straight">
+                    <div class="clothespin">🎀</div>
+                    <div class="mini-polaroid-frame">
                         <img src="WhatsApp Image 2026-07-18 at 00.24.05 (2).jpeg" alt="Us 3">
                     </div>
                 </div>
             </div>
 
-            <div class="canvas-curve">
-                <svg viewBox="0 0 500 100" preserveAspectRatio="none">
-                    <path d="M0,50 Q125,100 250,50 T500,50" fill="none" stroke="#ff4d6d" stroke-width="3" stroke-dasharray="5,5"/>
+            <div class="infographic-spline">
+                <svg viewBox="0 0 500 80" preserveAspectRatio="none">
+                    <path d="M0,40 Q125,80 250,40 T500,40" fill="none" stroke="#ff4d6d" stroke-width="2.5" stroke-dasharray="6,6"/>
                 </svg>
             </div>
 
-            <p class="date-text">Let's start over ✨</p>
+            <p class="canvas-footer-pulse">Let's start over ✨</p>
         </div>
     </div>
 
