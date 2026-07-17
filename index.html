@@ -8,11 +8,12 @@
 </head>
 <body>
 
+    <!-- Dynamic Background Theme Engine -->
+    <div class="dynamic-theme-bg" id="themeBg"></div>
     <div class="hearts-bg" id="heartsBg"></div>
     <div class="butterfly-container" id="butterflyContainer"></div>
-    <div class="glow-orb-1"></div>
-    <div class="glow-orb-2"></div>
 
+    <!-- Passcode Lock Screen -->
     <div class="passcode-container" id="passcodeScreen">
         <div class="cute-doodle-avatar">✨ 🤍 ✨</div>
         <h2>Enter the special year to unlock my heart ❤️</h2>
@@ -23,47 +24,39 @@
         <p class="error-msg" id="errorMsg">Wrong passcode! Try again 🥺</p>
     </div>
 
+    <!-- Main Aesthetic Canvas Dashboard -->
     <div class="main-web hidden" id="mainContent">
         
-        <div class="slide active" id="slide1">
+        <!-- Slide 1: Welcome Frame -->
+        <div class="slide active" id="slide1" data-bg="WhatsApp Image 2026-07-18 at 01.35.39 (2).jpeg">
             <h2 class="animate-text-reveal">I made something special for u <br> do u wanna see?</h2>
             <div class="doodle-accent-top">🦋 ✨ 🦋</div>
-            <div class="polaroid-hanging ribbon-hanging">
-                <img src="WhatsApp Image 2026-07-18 at 01.35.39 (2).jpeg" alt="Memory 1">
-            </div>
             <div class="action-footer-btns">
                 <button class="btn yes-btn bouncy" onclick="nextSlide(3)">YES</button>
                 <button class="btn no-btn bouncy" id="noBtn" onclick="nextSlide(2)">NO</button>
             </div>
         </div>
 
-        <div class="slide" id="slide2">
+        <!-- Slide 2: If No Clicked -->
+        <div class="slide" id="slide2" data-bg="WhatsApp Image 2026-07-18 at 01.35.39 (1).jpeg">
             <h2 class="animate-text-reveal">Why did u click no?! 😢</h2>
-            <div class="polaroid-hanging ribbon-hanging shake-loop">
-                <img src="WhatsApp Image 2026-07-18 at 01.35.39 (1).jpeg" alt="Memory 2">
-            </div>
             <div class="action-footer-btns">
                 <button class="btn yes-btn" onclick="nextSlide(1)">TRY AGAIN</button>
             </div>
         </div>
 
-        <div class="slide" id="slide3">
+        <!-- Slide 3: Reconnect Intro -->
+        <div class="slide" id="slide3" data-bg="WhatsApp Image 2026-07-18 at 01.35.39.jpeg">
             <h2 class="animate-text-reveal">Can we fix us? ❤️</h2>
             <p class="canvas-subtitle-glow">I miss our old days 🥺</p>
-            <div class="polaroid-hanging polaroid-classic floating-slow">
-                <img src="WhatsApp Image 2026-07-18 at 01.35.39.jpeg" alt="Memory 3">
-                <div class="handwritten-tag">You & Me Always ✨</div>
-            </div>
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(4)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <div class="slide" id="slide4">
+        <!-- Slide 4: Message Frame -->
+        <div class="slide" id="slide4" data-bg="WhatsApp Image 2026-07-18 at 01.35.38 (2).jpeg">
             <h2 class="animate-text-reveal">MY WISH FOR US 💖</h2>
-            <div class="polaroid-hanging polaroid-classic inline-frame">
-                <img src="WhatsApp Image 2026-07-18 at 01.35.38 (2).jpeg" alt="Memory 4">
-            </div>
             <div class="aesthetic-scroll-letter">
                 <p>No matter what happened, my feelings for you have never changed. You are still my comfort person, and no one could ever take your place.</p>
                 <p class="signature-font">Forever Yours ❤️</p>
@@ -73,99 +66,42 @@
             </div>
         </div>
 
-        <div class="slide" id="slide5">
+        <!-- Slide 5: Virtual Hug -->
+        <div class="slide" id="slide5" data-bg="WhatsApp Image 2026-07-18 at 01.35.38 (1).jpeg">
             <h2 class="animate-text-reveal">A tight hug for ya! 🤗</h2>
             <h1 class="glowing-neon-title">I MISS YOU</h1>
-            <div class="polaroid-hanging polaroid-classic floating-slow">
-                <img src="WhatsApp Image 2026-07-18 at 01.35.38 (1).jpeg" alt="Memory 5">
-            </div>
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(6)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <div class="slide" id="slide6">
+        <!-- Slide 6: Collage Showcase Layout -->
+        <div class="slide" id="slide6" data-bg="WhatsApp Image 2026-07-18 at 01.35.38.jpeg">
             <h2 class="animate-text-reveal">Will you be mine again? 💍</h2>
-            <div class="clothesline-canvas-board">
-                <div class="main-rope-line"></div>
-                <div class="clothesline-item angle-left">
-                    <div class="clothespin">🎀</div>
-                    <div class="mini-polaroid-frame">
-                        <img src="WhatsApp Image 2026-07-18 at 01.35.38.jpeg" alt="Memory 6">
-                    </div>
-                </div>
-                <div class="clothesline-item angle-right">
-                    <div class="clothespin">🎀</div>
-                    <div class="mini-polaroid-frame">
-                        <img src="WhatsApp Image 2026-07-18 at 01.35.37 (2).jpeg" alt="Memory 7">
-                    </div>
-                </div>
-                <div class="clothesline-item angle-straight">
-                    <div class="clothespin">🎀</div>
-                    <div class="mini-polaroid-frame">
-                        <img src="WhatsApp Image 2026-07-18 at 01.35.37 (1).jpeg" alt="Memory 8">
-                    </div>
-                </div>
-            </div>
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(7)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <div class="slide" id="slide7">
+        <!-- Slide 7: Grid Collage Layout -->
+        <div class="slide" id="slide7" data-bg="WhatsApp Image 2026-07-18 at 01.35.37.jpeg">
             <h2 class="animate-text-reveal">Your Smile Lights Up My World ✨</h2>
-            <div class="scrollable-collage-grid">
-                <div class="polaroid-hanging grid-thumb angle-left">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.37.jpeg" alt="Memory 9">
-                </div>
-                <div class="polaroid-hanging grid-thumb angle-right">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.36 (2).jpeg" alt="Memory 10">
-                </div>
-                <div class="polaroid-hanging grid-thumb angle-straight">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.36 (1).jpeg" alt="Memory 11">
-                </div>
-                <div class="polaroid-hanging grid-thumb angle-left">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.36.jpeg" alt="Memory 12">
-                </div>
-            </div>
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(8)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <div class="slide" id="slide8">
+        <!-- Slide 8: Side-by-Side Double Collage -->
+        <div class="slide" id="slide8" data-bg="WhatsApp Image 2026-07-18 at 01.35.35 (2).jpeg">
             <h2 class="animate-text-reveal">I Love Every Version Of You 💖</h2>
-            <div class="double-collage">
-                <div class="polaroid-hanging angle-left">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.35 (2).jpeg" alt="Memory 13">
-                    <div class="handwritten-tag">Cutest 🙈</div>
-                </div>
-                <div class="polaroid-hanging angle-right">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.35 (1).jpeg" alt="Memory 14">
-                    <div class="handwritten-tag">Adorable ✨</div>
-                </div>
-            </div>
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(9)">CLICK ME 👉</button>
             </div>
         </div>
 
-        <div class="slide" id="slide9">
+        <!-- Slide 9: Final Slide -->
+        <div class="slide" id="slide9" data-bg="WhatsApp Image 2026-07-18 at 01.35.35.jpeg">
             <h2 class="animate-text-reveal">Forever & Always, Just You ❤️</h2>
-            <div class="scrollable-collage-grid horizont-scroll">
-                <div class="polaroid-hanging grid-thumb-large">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.35.jpeg" alt="Memory 15">
-                </div>
-                <div class="polaroid-hanging grid-thumb-large">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.34 (3).jpeg" alt="Memory 16">
-                </div>
-                <div class="polaroid-hanging grid-thumb-large">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.34 (2).jpeg" alt="Memory 17">
-                </div>
-                <div class="polaroid-hanging grid-thumb-large">
-                    <img src="WhatsApp Image 2026-07-18 at 01.35.34 (1).jpeg" alt="Memory 18">
-                </div>
-            </div>
             <p class="canvas-footer-pulse">Let's build our beautiful future together ✨</p>
         </div>
 
