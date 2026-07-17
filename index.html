@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You ❤️</title>
+    <title>For My Universe ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="hearts-bg" id="heartsBg"></div>
     <div class="butterfly-container" id="butterflyContainer"></div>
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
 
     <div class="passcode-container" id="passcodeScreen">
         <div class="cute-doodle-avatar">✨ 🤍 ✨</div>
-        <h2>Enter the special year to enter ❤️</h2>
+        <h2>Enter the special year to unlock my heart ❤️</h2>
         <div class="passcode-box">
             <input type="password" id="passInput" placeholder="••••" maxlength="4">
             <button onclick="checkPasscode()">Unlock ✨</button>
@@ -25,13 +27,10 @@
         
         <div class="slide active" id="slide1">
             <h2 class="animate-text-reveal">I made something special for u <br> do u wanna see?</h2>
-            
             <div class="doodle-accent-top">🦋 ✨ 🦋</div>
-            
             <div class="polaroid-hanging ribbon-hanging">
-                <img src="WhatsApp Image 2026-07-18 at 00.24.03.jpeg" alt="Proposal">
+                <img src="WhatsApp Image 2026-07-18 at 01.35.39 (2).jpeg" alt="Memory 1">
             </div>
-            
             <div class="action-footer-btns">
                 <button class="btn yes-btn bouncy" onclick="nextSlide(3)">YES</button>
                 <button class="btn no-btn bouncy" id="noBtn" onclick="nextSlide(2)">NO</button>
@@ -40,11 +39,9 @@
 
         <div class="slide" id="slide2">
             <h2 class="animate-text-reveal">Why did u click no?! 😢</h2>
-            
             <div class="polaroid-hanging ribbon-hanging shake-loop">
-                <img src="WhatsApp Image 2026-07-18 at 00.24.04.jpeg" alt="Sad">
+                <img src="WhatsApp Image 2026-07-18 at 01.35.39 (1).jpeg" alt="Memory 2">
             </div>
-            
             <div class="action-footer-btns">
                 <button class="btn yes-btn" onclick="nextSlide(1)">TRY AGAIN</button>
             </div>
@@ -53,12 +50,10 @@
         <div class="slide" id="slide3">
             <h2 class="animate-text-reveal">Can we fix us? ❤️</h2>
             <p class="canvas-subtitle-glow">I miss our old days 🥺</p>
-            
             <div class="polaroid-hanging polaroid-classic floating-slow">
-                <img src="WhatsApp Image 2026-07-18 at 00.24.04 (1).jpeg" alt="Fix Us">
+                <img src="WhatsApp Image 2026-07-18 at 01.35.39.jpeg" alt="Memory 3">
                 <div class="handwritten-tag">You & Me Always ✨</div>
             </div>
-            
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(4)">CLICK ME 👉</button>
             </div>
@@ -66,17 +61,13 @@
 
         <div class="slide" id="slide4">
             <h2 class="animate-text-reveal">MY WISH FOR US 💖</h2>
-            <div class="cute-doodle-divider">🌸 🧸 ✨ 🐰 🌸</div>
-            
+            <div class="polaroid-hanging polaroid-classic inline-frame">
+                <img src="WhatsApp Image 2026-07-18 at 01.35.38 (2).jpeg" alt="Memory 4">
+            </div>
             <div class="aesthetic-scroll-letter">
-                <p><strong>Hey baby... 🥺</strong></p>
-                <p>No matter what happened or how things went wrong, my feelings for you have never changed. Life just doesn't feel the same without you around.</p>
-                <p>You are still my comfort person, and no one could ever take your place. I miss your laugh, our late-night talks, and the way you used to understand me like nobody else.</p>
-                <p>I know we've had our misunderstandings, but I truly believe we are meant to be. I am ready to put in all the efforts, love, and care to make things right again.</p>
-                <p>Can we please let go of the past and give us another chance? I want to build our future together, holding your hand forever.</p>
+                <p>No matter what happened, my feelings for you have never changed. You are still my comfort person, and no one could ever take your place.</p>
                 <p class="signature-font">Forever Yours ❤️</p>
             </div>
-            
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(5)">CLICK ME 👉</button>
             </div>
@@ -85,11 +76,9 @@
         <div class="slide" id="slide5">
             <h2 class="animate-text-reveal">A tight hug for ya! 🤗</h2>
             <h1 class="glowing-neon-title">I MISS YOU</h1>
-            
             <div class="polaroid-hanging polaroid-classic floating-slow">
-                <img src="WhatsApp Image 2026-07-18 at 00.24.04 (2).jpeg" alt="Hug">
+                <img src="WhatsApp Image 2026-07-18 at 01.35.38 (1).jpeg" alt="Memory 5">
             </div>
-            
             <div class="action-footer-btns">
                 <button class="btn next-slide-trigger" onclick="nextSlide(6)">CLICK ME 👉</button>
             </div>
@@ -97,40 +86,89 @@
 
         <div class="slide" id="slide6">
             <h2 class="animate-text-reveal">Will you be mine again? 💍</h2>
-            
             <div class="clothesline-canvas-board">
                 <div class="main-rope-line"></div>
-                
                 <div class="clothesline-item angle-left">
                     <div class="clothespin">🎀</div>
                     <div class="mini-polaroid-frame">
-                        <img src="WhatsApp Image 2026-07-18 at 00.24.05.jpeg" alt="Us 1">
+                        <img src="WhatsApp Image 2026-07-18 at 01.35.38.jpeg" alt="Memory 6">
                     </div>
                 </div>
-                
                 <div class="clothesline-item angle-right">
                     <div class="clothespin">🎀</div>
                     <div class="mini-polaroid-frame">
-                        <img src="WhatsApp Image 2026-07-18 at 00.24.05 (1).jpeg" alt="Us 2">
+                        <img src="WhatsApp Image 2026-07-18 at 01.35.37 (2).jpeg" alt="Memory 7">
                     </div>
                 </div>
-                
                 <div class="clothesline-item angle-straight">
                     <div class="clothespin">🎀</div>
                     <div class="mini-polaroid-frame">
-                        <img src="WhatsApp Image 2026-07-18 at 00.24.05 (2).jpeg" alt="Us 3">
+                        <img src="WhatsApp Image 2026-07-18 at 01.35.37 (1).jpeg" alt="Memory 8">
                     </div>
                 </div>
             </div>
-
-            <div class="infographic-spline">
-                <svg viewBox="0 0 500 80" preserveAspectRatio="none">
-                    <path d="M0,40 Q125,80 250,40 T500,40" fill="none" stroke="#ff4d6d" stroke-width="2.5" stroke-dasharray="6,6"/>
-                </svg>
+            <div class="action-footer-btns">
+                <button class="btn next-slide-trigger" onclick="nextSlide(7)">CLICK ME 👉</button>
             </div>
-
-            <p class="canvas-footer-pulse">Let's start over ✨</p>
         </div>
+
+        <div class="slide" id="slide7">
+            <h2 class="animate-text-reveal">Your Smile Lights Up My World ✨</h2>
+            <div class="scrollable-collage-grid">
+                <div class="polaroid-hanging grid-thumb angle-left">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.37.jpeg" alt="Memory 9">
+                </div>
+                <div class="polaroid-hanging grid-thumb angle-right">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.36 (2).jpeg" alt="Memory 10">
+                </div>
+                <div class="polaroid-hanging grid-thumb angle-straight">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.36 (1).jpeg" alt="Memory 11">
+                </div>
+                <div class="polaroid-hanging grid-thumb angle-left">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.36.jpeg" alt="Memory 12">
+                </div>
+            </div>
+            <div class="action-footer-btns">
+                <button class="btn next-slide-trigger" onclick="nextSlide(8)">CLICK ME 👉</button>
+            </div>
+        </div>
+
+        <div class="slide" id="slide8">
+            <h2 class="animate-text-reveal">I Love Every Version Of You 💖</h2>
+            <div class="double-collage">
+                <div class="polaroid-hanging angle-left">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.35 (2).jpeg" alt="Memory 13">
+                    <div class="handwritten-tag">Cutest 🙈</div>
+                </div>
+                <div class="polaroid-hanging angle-right">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.35 (1).jpeg" alt="Memory 14">
+                    <div class="handwritten-tag">Adorable ✨</div>
+                </div>
+            </div>
+            <div class="action-footer-btns">
+                <button class="btn next-slide-trigger" onclick="nextSlide(9)">CLICK ME 👉</button>
+            </div>
+        </div>
+
+        <div class="slide" id="slide9">
+            <h2 class="animate-text-reveal">Forever & Always, Just You ❤️</h2>
+            <div class="scrollable-collage-grid horizont-scroll">
+                <div class="polaroid-hanging grid-thumb-large">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.35.jpeg" alt="Memory 15">
+                </div>
+                <div class="polaroid-hanging grid-thumb-large">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.34 (3).jpeg" alt="Memory 16">
+                </div>
+                <div class="polaroid-hanging grid-thumb-large">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.34 (2).jpeg" alt="Memory 17">
+                </div>
+                <div class="polaroid-hanging grid-thumb-large">
+                    <img src="WhatsApp Image 2026-07-18 at 01.35.34 (1).jpeg" alt="Memory 18">
+                </div>
+            </div>
+            <p class="canvas-footer-pulse">Let's build our beautiful future together ✨</p>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
